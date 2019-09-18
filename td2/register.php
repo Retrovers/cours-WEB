@@ -64,8 +64,7 @@ if (isset ($_SESSION['errors']) && count ($_SESSION['errors'] != 0)){
             <input type="submit" class="btn btn-primary" value="S'inscrire">
             <a href="login.php" class="btn btn-outline-dark">Se connecter</a>
         </form>
-
     </div>
 </div>
 
-<? end_page(); ?>
+<?php end_page(); ?>

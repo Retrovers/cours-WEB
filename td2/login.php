@@ -36,3 +36,6 @@ if (isset($_SESSION['success']) && count($_SESSION['success']) != 0){
         </form>
     </div>
 </div>
+
+<?php
+end_page();

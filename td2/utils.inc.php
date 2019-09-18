@@ -15,9 +15,12 @@ function start_page ($title) {
     <?php
 }
 function end_page (){
-    $jour = date ('d/m/Y', strtotime("2020-04-01"));
-    echo $jour;
+
+    $jour = new DateTime();
     ?>
+    <p>Nous somme le <?= $jour->format('j/n/y') ?> et il est <?= $jour->format("H:i") ?> sur le serveur. <br>
+    Code source disponible <a href="https://github.com/Retrovers/cours-WEB" target="_blank">ici</a>.
+    </p>
     </body>
     </html>
     <?php
