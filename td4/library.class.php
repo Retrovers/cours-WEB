@@ -48,6 +48,31 @@ class Library {
         array_push($this->books, $book);
     }
 
+    public function getBooksBy($author) {
+        $list = [];
+        foreach ($this->books as $book){
+            if ($book->getAuthor() == $author) array_push($list, $book);
+        }
+        ?>
+        <p>Livre ecrit par <?= $author ?> : <br>
+        <table style="display: inline; border-collapse: collapse;">
+            <tr>
+                <th style="border: 1px solid black;">Titre</th>
+                <th style="border: 1px solid black;" >Editeur</th>
+                <th style="border: 1px solid black;">Nombre de page</th>
+            </tr>
+            <?php
+            foreach ($list as $book){ ?>
+                <tr>
+                    <td style="border: 1px solid black;"><?= $book->getTitle() ?></td>
+                    <td style="border: 1px solid black;" ><?= $book->getEditor() ?></td>
+                    <td style="border: 1px solid black;"><?= $book->getPageNb() ?></td>
+                </tr>
+            <?php } ?>
+        </table>
+        <?php
+    }
+
     public function removeBook($book){
         unset($this->books[array_search($book, $this->books)]);
     }

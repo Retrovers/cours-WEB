@@ -28,6 +28,7 @@ require 'library.class.php';
     $book1 = new Book("Mon super livre 1", "Villas-Boas", "OM", 30);
     $book2 = new Book("Mon super livre 2", "Galtier", "LOSC", 10);
     $book3 = new Book("Mon super livre 3", "Tuchel", "PSG", 1);
+    $book4 = new Book("La legende", "Villas-Boas", "OM", 50);
     ?>
     <p>
         - Ajout des livres dans la Library "Mon centre" et un doublon
@@ -37,6 +38,7 @@ require 'library.class.php';
     $library->addBook($book2);
     $library->addBook($book3);
     $library->addBook($book2);
+    $library->addBook($book4);
     ?>
     <p>
          - Affichage des livres
@@ -67,6 +69,12 @@ require 'library.class.php';
     </p>
     <?php
     $library->showBooks();
+    ?>
+    <p>
+        - Prendre les livres ecrit uniquement par "Villas-Boas"
+    </p>
+    <?php
+    $library->getBooksBy("Villas-Boas");
     ?>
 </body>
 </html>
