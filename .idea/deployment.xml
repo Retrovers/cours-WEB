@@ -8,6 +8,9 @@
             <mapping deploy="/httpdocs/cours" local="$PROJECT_DIR$" web="/" />
             <mapping local="" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/td2/utils.inc.php" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
