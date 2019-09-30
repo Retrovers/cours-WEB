@@ -1,0 +1,17 @@
+# Fichier(s) par défaut (si le premier n'existe pas, on prend le 2e, etc.).
+DirectoryIndex index.php index.htm /error/404.php
+
+<Files delete.php>
+    AuthUserFile ".htpasswd"
+    # Chemin pour les groupes.
+    #AuthGroupFile /dev/null
+    AuthGroupFile ".htgroup"
+    # Message d’authentification.
+    AuthName "Il faut s'autentifié !"
+    # Type d'authentification (Basic signifie que l'accès est réservé aux
+    # utilisateurs listés dans le fichier spécifié par la directive AuthUserFile)
+    AuthType Basic
+    # Indique que l'on autorise uniquement les utilisateurs authentifiés.
+    Require valid-user
+
+</Files>
